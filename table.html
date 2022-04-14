@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css">
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-alpine.css">
+    <title>Table Page</title>
+</head>
+<body>
+<style>
+    .heading {
+        background-color: #690500;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .over-row {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media (min-width: 1200px) {
+        .row {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    .grid-over {
+        margin: 20px;
+    }
+
+    .main-grid {
+        width: 700px;
+        height: 500px;
+    }
+
+    .det-grid {
+        width: 500px;
+        height: 500px;
+    }
+</style>
+<div class="heading">
+    <h1>Christopher Valentine DataTable</h1>
+</div>
+<div class="over-row">
+    <div class="row">
+        <div class="grid-over">
+            <h2>Users</h2>
+            <div id="myGrid" class="ag-theme-alpine main-grid"></div>
+        </div>
+        <div class="grid-over">
+            <h2>Posts</h2>
+            <div id="detGrid" class="ag-theme-alpine det-grid"></div>
+        </div>
+    </div>
+</div>
+
+<script src="table.js"></script>
+</body>
+</html>
